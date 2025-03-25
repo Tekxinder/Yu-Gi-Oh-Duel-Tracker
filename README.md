@@ -15,8 +15,9 @@
 
 ## Screenshots
 
-![Screenshot of the interface](https://ibb.co/7c927Zk)
-![Screenshot of the file](https://ibb.co/0RJVvD5Z)
+![Interface YGO Duel tracker](https://github.com/user-attachments/assets/0abc0984-ebb9-4cdb-9d77-bfc974a38d09)
+
+![File YGO Duel tracker](https://github.com/user-attachments/assets/0c44077f-cbbb-4743-9c49-ae56f84756a2)
 
 ## Installation
 
