@@ -64,7 +64,7 @@ Gui, Add, Button, x230 y405 w40 h30 gIncreaseloss , + L
 Gui, Add, Button, x300 y405 w40 h30 gIncreaseDraw, + D
 
 Gui, Add, Button, x10 y450 w120 h30 gResetLP, Reset LP
-Gui, Add, Button, x145 y450 w90 h30 gAutoSave, Update
+Gui, Add, Button, x145 y450 w90 h30 gCalc, Calc
 Gui, Add, Button, x250 y450 w120 h30 gReset, Reset all
 
 Gui, Add, GroupBox, x390 y10 w200 h470, Log
@@ -288,11 +288,11 @@ Reset:
     GuiControlGet, lock2,, LockPlayer2Name
 
     if (!lock1) {
-        GuiControl,, Player1Name, Tekxinder
+        GuiControl,, Player1Name, Player
         GuiControl,, Deck1, Deck
     }
     if (!lock2) {
-        GuiControl,, Player2Name, Adversaire
+        GuiControl,, Player2Name, Opponent
         GuiControl,, Deck2, Deck
     }
     GuiControl,, LP1, 8000
@@ -348,6 +348,16 @@ SaveResult:
 
     FileAppend, %win%-%loss%-%draw% , Tournamant_result.txt
     FileAppend, Round : %nRound% , round.txt
+Return
+
+Calc:
+#c::
+    if not WinExist("Calculator")
+    {
+        Run calc.exe
+        WinWait Calculator
+    }
+    WinActivate Calculator
 Return
 
 GuiClose:
