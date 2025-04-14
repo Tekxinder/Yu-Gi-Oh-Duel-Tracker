@@ -4,34 +4,37 @@
 
 ## Features
 
-- **45-minute Timer**: Built-in timer to track duel time with options to start, pause, and reset.
+- **45-Minute Timer**: Built-in timer to track duel time with options to start, pause, and reset.
 - **Life Points (LP) Management**: Track LP for two players with options to increase, decrease, or halve LP.
 - **Victory Tracking**: Victory counter for each player.
 - **Tournament Mode**: Track rounds with options to record wins (W), losses (L), and draws (D).
-- **Auto-save**: Automatically save player data to resume duels later.
+- **Auto-Save**: Automatically save player data to resume duels later.
 - **Sound Notifications**: Sound alert when the timer reaches zero.
 - **Action Logging**: Record actions in a log for later review.
 - **Player Name Locking**: Option to lock player names to prevent accidental changes.
 
 ## Screenshots
 
-![Interface YGO Duel tracker](https://github.com/user-attachments/assets/0abc0984-ebb9-4cdb-9d77-bfc974a38d09)
+![YGO Duel Tracker Interface](https://github.com/user-attachments/assets/0abc0984-ebb9-4cdb-9d77-bfc974a38d09)
 
-![File YGO Duel tracker](https://github.com/user-attachments/assets/0c44077f-cbbb-4743-9c49-ae56f84756a2)
+![YGO Duel Tracker File](https://github.com/user-attachments/assets/0c44077f-cbbb-4743-9c49-ae56f84756a2)
 
 ## Installation
 
-1. **Download AutoHotkey**: Ensure you have AutoHotkey installed on your system. You can download it from the [official website](https://www.autohotkey.com/).
+### Option 1: Use the Ready-to-Go Application (Recommended 🚀)
 
-2. **Download the Files**: Download both the `YGO_Duel_Tracker.ahk` and the `YGO_Duel_Tracker.exe` files from this repository.
+1. **Download the .exe File**: Get the `YGO_Duel_Tracker.exe` file from this repository.
+2. **Run the .exe**: No installation required! You can start using the tracker right away.
 
-3. **Run the Application**:
-   - If you simply want to use the software, **double-click the `.exe` file** to launch the tracker immediately.
-   - If you wish to explore or modify the code, **open the `.ahk` file**, which is the source code of the application. You can edit it with any text editor and run it with AutoHotkey installed.
+### Option 2: Run the Source Code Manually
 
-> **Note:**  
-> - The `.ahk` file is the **source code** — use it if you want to modify or inspect the application.
-> - The `.exe` file is the **compiled version**, ready to use directly, no installation needed!
+1. **Download AutoHotkey**: If you want to use or modify the source code, make sure you have AutoHotkey installed. Download it from the [official website](https://www.autohotkey.com/).
+2. **Download the Script**: Get the `YGO_Duel_Tracker.ahk` file from this repository.
+3. **Run the Script**: Double-click the `.ahk` file to launch the application.
+
+> **📝 Note:**
+> - The `.ahk` file is the source code of the application. You can open and edit it with any text editor or AutoHotkey if you want to customize or improve the tool.
+> - The `.exe` is the compiled version, ready for immediate use without needing to install AutoHotkey.
 
 ## Usage
 
@@ -56,7 +59,7 @@ To integrate **YGO Duel Tracker** data into OBS Studio using text files, follow 
 3. **Configure the Text Source**:
    - Name your source (e.g., "Timer").
    - In the text source settings, check `Read from file`.
-   - Select the corresponding text file (e.g., `timer.txt`.
+   - Select the corresponding text file (e.g., `timer.txt`).
 
 4. **Customization**:
    - Customize the text appearance and adjust its position in your OBS scene.
