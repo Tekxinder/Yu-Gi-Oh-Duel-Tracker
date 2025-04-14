@@ -23,13 +23,19 @@
 
 1. **Download AutoHotkey**: Ensure you have AutoHotkey installed on your system. You can download it from the [official website](https://www.autohotkey.com/).
 
-2. **Download the Script**: Download the `YGO_Duel_Tracker.ahk` file from this repository.
+2. **Download the Files**: Download both the `YGO_Duel_Tracker.ahk` and the `YGO_Duel_Tracker.exe` files from this repository.
 
-3. **Run the Script**: Double-click the `.ahk` file to run the application.
+3. **Run the Application**:
+   - If you simply want to use the software, **double-click the `.exe` file** to launch the tracker immediately.
+   - If you wish to explore or modify the code, **open the `.ahk` file**, which is the source code of the application. You can edit it with any text editor and run it with AutoHotkey installed.
+
+> **Note:**  
+> - The `.ahk` file is the **source code** — use it if you want to modify or inspect the application.
+> - The `.exe` file is the **compiled version**, ready to use directly, no installation needed!
 
 ## Usage
 
-1. **Launch the Application**: Run the script to open the user interface.
+1. **Launch the Application**: Run the `.exe` file or the `.ahk` script to open the user interface.
 2. **Configure Players**: Enter player names, decks, and adjust LP as needed.
 3. **Start the Timer**: Click "Start/Pause" to start or pause the timer.
 4. **Manage LP and Victories**: Use the buttons to adjust LP and record victories.
@@ -50,7 +56,7 @@ To integrate **YGO Duel Tracker** data into OBS Studio using text files, follow 
 3. **Configure the Text Source**:
    - Name your source (e.g., "Timer").
    - In the text source settings, check `Read from file`.
-   - Select the corresponding text file (e.g., `timer.txt`).
+   - Select the corresponding text file (e.g., `timer.txt`.
 
 4. **Customization**:
    - Customize the text appearance and adjust its position in your OBS scene.
