@@ -1,76 +1,70 @@
 # YGO Duel Tracker
 
-**YGO Duel Tracker** is an AutoHotkey (AHK) application designed to track duels in the Yu-Gi-Oh! game. It provides an intuitive user interface to manage life points (LP), decks, and victories for players, as well as track duel time.
+**YGO Duel Tracker** is an AutoHotkey (AHK) application designed to track duels in the Yu-Gi-Oh! game. It provides an intuitive user interface to manage life points, decks, victories, and card information.
 
 ## Features
 
-- **45-Minute Timer**: Built-in timer to track duel time with options to start, pause, and reset.
-- **Life Points (LP) Management**: Track LP for two players with options to increase, decrease, or halve LP.
-- **Victory Tracking**: Victory counter for each player.
-- **Tournament Mode**: Track rounds with options to record wins (W), losses (L), and draws (D).
-- **Auto-Save**: Automatically save player data to resume duels later.
-- **Sound Notifications**: Sound alert when the timer reaches zero.
-- **Action Logging**: Record actions in a log for later review.
-- **Player Name Locking**: Option to lock player names to prevent accidental changes.
+### Duel Management
+- **45-Minute Timer**: Built-in tournament timer with start/pause/reset controls
+- **Life Points (LP) Tracking**: 
+  - Adjust LP with customizable increments
+  - Half-LP button for quick calculations
+  - Auto-saves LP values between sessions
+- **Victory Tracking**: Best-of-3 counter for each player
+- **Tournament Mode**: 
+  - Track rounds (W/L/D)
+  - Auto-reset between matches
+
+### Card Search Engine (New in v1.2)
+- **YGOPRODeck API Integration**: Search 10,000+ Yu-Gi-Oh! cards
+- **High-Resolution Images**: Displays card artwork
+- **Detailed Card Info**: 
+  - Name, Type, Attribute/Race
+  - ATK/DEF/Level/Link values
+  - Full card effect text
+- **Local Image Caching**: Faster subsequent searches
+
+### Enhanced Interface (v1.2)
+- **Tabbed Layout**: Organized into Duel/Card Search/Log sections
+- **Player Locking**: Prevent accidental name/deck changes
+- **Complete Activity Log**: Records all duel actions
 
 ## Screenshots
 
-![YGO Duel Tracker Interface](https://github.com/user-attachments/assets/0abc0984-ebb9-4cdb-9d77-bfc974a38d09)
-
-![YGO Duel Tracker File](https://github.com/user-attachments/assets/0c44077f-cbbb-4743-9c49-ae56f84756a2)
+![Duel Interface](https://github.com/user-attachments/assets/85b08959-ebed-4e9b-8f86-2cd2c85b6bbb)
+![Card Search](https://github.com/user-attachments/assets/d0a746ab-585f-4c09-a3dd-313952075949)
+![Activity Log](https://github.com/user-attachments/assets/9e428986-104c-4498-be59-855e0d42684e)
 
 ## Installation
 
-### Option 1: Use the Ready-to-Go Application (Recommended 🚀)
+### Option 1: Ready-to-Use EXE (Recommended)
+1. Download `YGO_Duel_Tracker.exe` from Releases
+2. Run immediately - no dependencies needed
 
-1. **Download the .exe File**: Get the `YGO_Duel_Tracker.exe` file from this repository.
-2. **Run the .exe**: No installation required! You can start using the tracker right away.
+### Option 2: Source Code
+1. Install [AutoHotkey v1.1+](https://www.autohotkey.com/)
+2. Place `JSON.ahk` in the script directory
+3. Create a `\Cache` folder for card images
+4. Run `YGO_Duel_Tracker.ahk`
 
-### Option 2: Run the Source Code Manually
+> **Note**: Internet required for card searches. All duel data saves automatically.
 
-1. **Download AutoHotkey**: If you want to use or modify the source code, make sure you have AutoHotkey installed. Download it from the [official website](https://www.autohotkey.com/).
-2. **Download the Script**: Get the `YGO_Duel_Tracker.ahk` file from this repository.
-3. **Run the Script**: Double-click the `.ahk` file to launch the application.
+## OBS Integration
+Display tracker data in OBS:
+1. Application saves to text files (`timer.txt`, `lp1.txt`, etc.)
+2. In OBS: Add Text Source → Enable "Read from file"
+3. Select the corresponding text file
+4. Customize font/position as needed
 
-> **📝 Note:**
-> - The `.ahk` file is the source code of the application. You can open and edit it with any text editor or AutoHotkey if you want to customize or improve the tool.
-> - The `.exe` is the compiled version, ready for immediate use without needing to install AutoHotkey.
+## Version 1.2 Highlights
+- New card search functionality
+- Improved tabbed interface
+- Enhanced tournament features
+- Better error handling
+- Optimized performance
 
-## Usage
-
-1. **Launch the Application**: Run the `.exe` file or the `.ahk` script to open the user interface.
-2. **Configure Players**: Enter player names, decks, and adjust LP as needed.
-3. **Start the Timer**: Click "Start/Pause" to start or pause the timer.
-4. **Manage LP and Victories**: Use the buttons to adjust LP and record victories.
-5. **Tournament Tracking**: Use tournament options to record match results.
-
-## Setting Up in OBS Studio
-
-To integrate **YGO Duel Tracker** data into OBS Studio using text files, follow these steps:
-
-1. **Prepare Text Files**:
-   - Ensure the application saves relevant data (timer, LP, victories) into separate text files (e.g., `timer.txt`, `lp1.txt`, `lp2.txt`).
-
-2. **Create a Text Source in OBS**:
-   - Open OBS Studio.
-   - Add a new source by clicking the `+` button in the `Sources` section.
-   - Select `Text (GDI+)`.
-
-3. **Configure the Text Source**:
-   - Name your source (e.g., "Timer").
-   - In the text source settings, check `Read from file`.
-   - Select the corresponding text file (e.g., `timer.txt`).
-
-4. **Customization**:
-   - Customize the text appearance and adjust its position in your OBS scene.
-
-5. **Repeat for Other Data**:
-   - Repeat the steps for each piece of data you want to display (LP, victories, etc.).
-
-## Contributions
-
-Contributions are welcome! If you have suggestions or improvements, feel free to open an issue or submit a pull request.
+## Contributing
+Suggestions and improvements welcome! Open an issue or PR.
 
 ## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+MIT - See [LICENSE](LICENSE)
