@@ -38,8 +38,8 @@
 ## Installation
 
 ### Option 1: Ready-to-Use EXE (Recommended)
-1. Download `YGO_Duel_Tracker.exe` from Releases
-2. Run immediately - no dependencies needed
+1. Download `YGO_Duel_Tracker.exe` / `JSON.ahk` / `alarm.mp3` from Releases
+2. Run `YGO_Duel_Tracker.exe` immediately
 
 ### Option 2: Source Code
 1. Install [AutoHotkey v1.1+](https://www.autohotkey.com/)
