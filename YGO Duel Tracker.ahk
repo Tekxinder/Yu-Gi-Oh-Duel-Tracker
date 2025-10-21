@@ -13,7 +13,7 @@ global isDownloading := false
 global showDetails := false
 
 global TimerRunning := false
-global TimeLeft := 45 * 60
+global TimeLeft := 50 * 60
 SetTimer, UpdateTimer, 1000, Off
 
 prevLP1 := 8000
@@ -25,12 +25,6 @@ global win := 0
 global loss := 0
 global draw := 0
 
-; Vérifier le fichier cache
-IfNotExist, %cacheDir%
-{
-    FileCreateDir, %cacheDir%
-}
-
 ;=====INTERFACE=====
 Gui, Add, Tab2,w160 h23, Duel|Card Search|Log
 ;=====PAGE Duel=====
@@ -40,7 +34,7 @@ Gui, Font, s9, Segoe UI ;
 Gui, Add, GroupBox, x10 y+10 w360 h60 , Chrono :
 Gui, Add, Button, x20 y60 w80 h30 gStartStop, Start/Stop
 Gui, Font, s18 bold ;
-Gui, Add, Text, x+50 vTimerText cDA4F49 , 45:00
+Gui, Add, Text, x+50 vTimerText cDA4F49 , 50:00
 Gui, Font, s9 normal ;
 Gui, Add, Button, x+60 w80 h30 gResetTimer, Reset
 
@@ -182,8 +176,8 @@ Return
 ResetTimer:
 SetTimer, UpdateTimer, Off
 TimerRunning := False
-TimeLeft := 45 * 60
-GuiControl,, TimerText, 45:00
+TimeLeft := 50 * 60
+GuiControl,, TimerText, 50:00
 Gosub, TimeSave
 Return
 
@@ -297,6 +291,7 @@ AddVictory1:
     if (victory1 < 2 ) {
         victory1++
         GuiControl,, Victory1, %victory1%
+        Gosub, ResetLP
         Gosub, AutoSave
         LogAction("Victory added for Player 1. Total: " victory1)
     }
@@ -344,6 +339,7 @@ AddVictory2:
     if (victory2 < 2 ) {
         victory2++
         GuiControl,, Victory2, %victory2%
+        Gosub, ResetLP
         Gosub, AutoSave
         LogAction("Victory added for Player 2. Total: " victory2)
     }
@@ -591,6 +587,12 @@ if (selectedIndex = 0) {
 
 cardData := results[selectedIndex]
 
+; Vérifier le cache
+IfNotExist, %cacheDir%
+{
+    FileCreateDir, %cacheDir%
+    MsgBox, Dossier créé : %cacheDir%
+}
 cacheFile := cacheDir . "\" . cardData.id . ".jpg"
 if FileExist(cacheFile) {
     GuiControl,, CardImage, %cacheFile%
